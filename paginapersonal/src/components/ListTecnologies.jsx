@@ -1,14 +1,14 @@
-const tecnologies = [{ name: "Javascript" }, { name: "CSS" }, { name: "HTML" }];
+const tecnologies = [
+  { id: 1, name: "Javascript" },
+  { id: 2, name: "CSS" },
+  { id: 3, name: "HTML" },
+];
 
 const ListTecnologies = () => {
   return (
     <ul>
-      {tecnologies.map((value, index) => {
-        return (
-          <div>
-            <li>{value.name}</li>
-          </div>
-        );
+      {tecnologies.map((value) => {
+        return <li key={value.id}>{value.name}</li>;
       })}
     </ul>
   );
